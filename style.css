@@ -1,0 +1,126 @@
+/* Selecciona todas las etiquetas <a> (enlaces) que estén dentro de <nav> */
+nav a {
+    /* Pone un color de fondo azul oscuro tipo botón */
+    background-color: #1e293b;
+
+    /* Color del texto por defecto (blanco) */
+    color: #ffffff;
+
+    /* Quita el subrayado azul que traen los enlaces por defecto */
+    text-decoration: none;
+
+    /* Espacio interno: 8px arriba y abajo, 14px a izquierda y derecha (hace el botón más cómodo) */
+    padding: 8px 14px;
+
+    /* Redondea las esquinas del botón */
+    border-radius: 6px;
+}
+
+/* :hover es una pseudoclase: aplica estos estilos SOLO cuando pasas el cursor por encima del enlace */
+nav a:hover {
+    /* Cambia el fondo a un gris azulado un poco más claro */
+    background-color: #334155;
+
+    /* Cambia el color del texto a amarillo/ámbar al pasar el ratón */
+    color: #f59e0b;
+}
+
+/* El punto (.) selecciona elementos por su atributo class="..." */
+/* Le da texto azul al enlace con class="enlace-inicio" */
+.enlace-inicio {
+    color: #2563eb;
+}
+
+/* Le da texto verde al enlace con class="enlace-servicios" */
+.enlace-servicios {
+    color: #16a34a;
+}
+
+/* Le da texto rojo al enlace con class="enlace-contacto" */
+.enlace-contacto {
+    color: #dc2626;
+}
+
+/* La coma (,) permite aplicar las mismas reglas a dos clases a la vez: .img-1 e .img-2 */
+.img-1,
+.img-2 {
+    /* Fija el ancho exacto de la imagen en 300 píxeles */
+    width: 300px;
+
+    /* Fija el alto exacto de la imagen en 200 píxeles */
+    height: 200px;
+
+    /* Hace que la foto llene el cuadro de 300x200 recortando lo que sobra, sin estirarla ni aplastarla */
+    object-fit: cover;
+
+    /* Redondea las esquinas de las imágenes */
+    border-radius: 8px;
+}
+
+.menu-desplegable {
+    position: relative;
+    display: inline-block;
+}
+
+/* Botón con las tres rayitas */
+.boton-hamburguesa {
+    background-color: #1e293b;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    list-style: none; /* Oculta el triángulo por defecto */
+}
+
+/* Quita el triángulo en Chrome / Safari / Edge */
+.boton-hamburguesa::-webkit-details-marker {
+    display: none;
+}
+
+.boton-hamburguesa:hover {
+    background-color: #334155;
+    color: #f59e0b;
+}
+
+/* Opciones desplegables */
+.opciones-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.opciones-menu a {
+    background-color: #1e293b;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+.opciones-menu a:hover {
+    background-color: #334155;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between; /*título a la izquierda, menú a la derecha */
+    align-items: center;            /* Centramos verticalmente */
+    padding: 12px 20px;
+}
+
+.opciones-menu {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+    z-index: 10;
+}
+
+main,
+footer {
+    padding: 16px 20px;
+}

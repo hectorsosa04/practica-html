@@ -1,0 +1,87 @@
+<!-- Indica al navegador que este documento usa la versión moderna HTML5 -->
+<!DOCTYPE html>
+
+<!-- Etiqueta raíz que envuelve toda la página; lang="es" indica que el idioma es español -->
+<html lang="es">
+
+    <!-- <head>: Contiene información de configuración (metadatos) que NO se ve dentro de la página -->
+    <head>
+        <!-- Permite que se vean bien las tildes (á, é, í, ó, ú), la ñ y símbolos especiales -->
+        <meta charset="UTF-8">
+
+        <!-- El texto que aparece en la pestaña del navegador -->
+        <title>Mi página</title>
+
+        <!-- Conecta este archivo HTML con tu hoja de estilos CSS llamada style.css -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <!-- <body>: Contiene TODO lo que sí se ve en la pantalla de tu sitio web -->
+    <body>
+
+        <!-- <header>: Encabezado principal de la página -->
+        <header class="encabezado">
+            <!-- <h1>: Título más importante de toda la página (solo se usa uno por página) -->
+            <h1>Mi sitio Web</h1>
+
+            <!-- <nav>: Contenedor para el menú de navegación principal -->
+            <nav>
+                <details class="menu-desplegable">
+                    <summary class="boton-hamburguesa" aria-label="abrir menú">&#9776;</summary>
+                    <div class="opciones-menu">
+                <!-- <a>: Enlaces. El # apunta al id de una sección en esta misma página; class conecta con CSS -->
+                <a href="#inicio" class="enlace-inicio">Inicio</a>
+                <a href="#servicios" class="enlace-servicios">Servicios</a>
+                <a href="#contacto" class="enlace-contacto">Contacto</a>
+            
+                    </div>
+             </details>
+            </nav>
+
+        </header>
+
+        <!-- <main>: Contenido principal y único de la página -->
+        <main>
+
+            <!-- <section>: Agrupa un bloque temático; id="inicio" sirve como destino del enlace #inicio -->
+            <section id="inicio">
+                <!-- <h2>: Subtítulo de segundo nivel (para títulos de sección) -->
+                <h2>Bienvenidos</h2>
+                <!-- <p>: Párrafo de texto -->
+                <p>Aquí empieza el contenido principal de la página.</p>
+            </section>
+
+            <!-- Segunda sección temática de la página -->
+            <section id="servicios">
+                <h2>Servicios</h2>
+
+                <!-- <article>: Contenido independiente dentro de una sección (como una tarjeta o publicación) -->
+                <article>
+                    <!-- <h3>: Subtítulo de tercer nivel (dentro del artículo) -->
+                    <h3>Béisbol</h3>
+
+                    <!-- <img>: Muestra una imagen. src es la ruta, alt es el texto descriptivo y class es para CSS -->
+                    <img src="img/1.jpg" alt="Lo que me gusta jugar" class="img-1">
+                    <img src="img/2.jpg" alt="Algún día estaré ahí" class="img-2">
+
+                    <p>Páginas limpias, rápidas y accesibles.</p>
+                </article>
+            </section>
+
+        </main>
+
+        <!-- <footer>: Pie de página (parte inferior del sitio); id="contacto" lo conecta con #contacto -->
+        <footer id="contacto">
+            <!-- <address>: Etiqueta semántica para datos de contacto del autor o dueño del sitio -->
+            <address>
+                correo@gmail.com
+            </address>
+
+            <!-- &copy; es una entidad HTML que dibuja el símbolo de copyright (©) -->
+            <p>&copy; 2026 Mi sitio Web</p>
+        </footer>
+
+    </body>
+
+<!-- Cierra el documento HTML completo -->
+</html>
